@@ -37,7 +37,11 @@ const Weather = () => {
       </div>
       {weatherData !== undefined ? (
         <>
-          <img src={clear_icon} alt="" className="weather-icon" />
+          <img
+            src={`https://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`}
+            alt=""
+            className="weather-icon"
+          />
           <p className="temperature">
             {weatherData.main.temp}
             <h6>
